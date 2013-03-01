@@ -1,0 +1,19 @@
+
+                <% _.each(feeds, function(item) { %>
+                <li class="span3">
+                  <div class="thumbnail">
+                    <div class="bg-thumbnail-img">
+                      <a class="overlay" href="#video/<%= item.video.id %>" data-video="#<%= item.video.id %>">
+                        <img src="img/play.png">
+                      </a>
+                      <img src="http://i.ytimg.com/vi/<%= item.video.id %>/hqdefault.jpg">
+                    </div>
+                    <h5><a href="#"><%= item.video.title %></a></h5>
+                    <div class="box clearfix">
+                      <small class="pull-left">views</small>
+                      <small class="pull-right"><%= item.video.viewCount %></small>
+                    </div>
+                  </div>
+                </li>  
+                <% }); %>
+            
