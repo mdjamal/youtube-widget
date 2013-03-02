@@ -8,9 +8,16 @@
                       </a>
                       <img src="http://i.ytimg.com/vi/<%= item.video.id %>/hqdefault.jpg">
                     </div>
-                    <h5><a href="#"><%= item.video.title %></a></h5>
+                    <h5> <a href="#"><%= item.video.title %></a></h5>
                     <div class="box clearfix">
-                      <small class="pull-left">views</small>
+                      <small class="pull-left social-buttons cf">
+ 
+      <a href="http://twitter.com/share" class="socialite twitter-share" data-text="Check this video" data-url="http://mdjamal.in/youtube-widget/video.html?video=<%= item.video.id %>" data-hashtags="liltube" rel="nofollow" target="_blank"></a>
+
+      <a href="http://www.facebook.com/sharer.php?u=http://www.mdjamal.in&amp;t=Socialite.js" class="socialite facebook-like" data-href="http://mdjamal.in/youtube-widget/video.html?video=<%= item.video.id %>" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"></a>
+   
+                      <!--   <a href="http://localhost/youtube-widget/video.html?video=<%= item.video.id %>">tweet</a> -->
+                      </small>
                       <small class="pull-right"><%= item.video.viewCount %></small>
                     </div>
                   </div>

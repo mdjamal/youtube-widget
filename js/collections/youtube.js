@@ -6,7 +6,7 @@ define([
   
 VideoCollection=Backbone.Collection.extend({
  url: function () {
-      return 'https://gdata.youtube.com/feeds/api/playlists/PL5E6FCBCECB6B7946?&v=2&start-index='+this.page+'&max-results=12&alt=jsonc'          
+      return 'https://gdata.youtube.com/feeds/api/playlists/PL5E6FCBCECB6B7946?&v=2&start-index='+this.page+'&max-results=12&alt=jsonc&orderby=reversedPosition'          
     },
 
 
