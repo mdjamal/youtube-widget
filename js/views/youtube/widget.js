@@ -42,6 +42,7 @@ define([
           // Now we have finished loading set isLoading back to false
           that.isLoading=false;
           that.videoLoading = false;
+          that.image_fade();
           $('body').removeClass('stop-scrolling');
         }
       });      
@@ -50,6 +51,25 @@ define([
 
 
  
+
+image_fade:function () {
+
+    $('img').bind('load', function () {
+     
+     $("ul[data-liffect] li .youtube-img").each(function (i) {
+        $(this).attr("style", "-webkit-animation-delay:" + 200 + "ms;"
+                + "-moz-animation-delay:" + 200 + "ms;"
+                + "-o-animation-delay:" +  200 + "ms;"
+                + "animation-delay:" +  200 + "ms;");
+        if (i == $("ul[data-liffect] li").size() -1) {
+            $("ul[data-liffect]").addClass("play")
+        }
+    });
+ 
+
+     });
+},
+   
     checkScroll: function () {
       $('#loader').addClass('hide');
       var totalVideoCount=$('#video-count').text();
@@ -60,12 +80,8 @@ define([
       if  ($(window).scrollTop() == $(document).height() - $(window).height()){
           $('#loader').removeClass('hide');
           this.youtubeCollection.page += 12; // Load next page
-          
-          this.loadResults();
- 
-          
-        }
-      
+         this.loadResults();
+         }
      }
      else
      {

@@ -6774,6 +6774,8 @@ body {
   display: block;
   width: 200px;
   height: 113px;
+  z-index: 9;
+
 }
 /* line 63, ../../sass/_custom.scss */
 .thumbnail .overlay img {
@@ -6823,3 +6825,82 @@ body {
   height: 100%;
   overflow: hidden;
 }
+
+ul[data-liffect="fadeIn"] li .youtube-img{
+    opacity: 0;
+      -webkit-animation: fadeIn 600ms ease both;
+    -webkit-animation-play-state: paused;
+    -moz-animation: fadeIn 600ms ease both;
+    -moz-animation-play-state: paused;
+    -o-animation: fadeIn 600ms ease both;
+    -o-animation-play-state: paused;
+    animation: fadeIn 600ms ease both;
+    animation-play-state: paused;
+}
+
+ul[data-liffect="fadeIn"].play li .youtube-img {
+    -webkit-animation-play-state: running;
+    -moz-animation-play-state: running;
+    -o-animation-play-state: running;
+    animation-play-state: running;
+}
+
+
+@-webkit-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#back-top {
+  position: fixed;
+  bottom: 30px;
+  right: 40px;
+}
+
+#back-top a {
+  width: 54px;
+  display: block;
+  text-align: center;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #bbb;
+
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+#back-top a:hover {
+  color: #000;
+}
+
+/* arrow icon (span tag) */
+#back-top span {
+  width: 54px;
+  height: 54px;
+  display: block;
+  margin-bottom: 7px;
+  background: url(../img/up-arrow.png) no-repeat center center;
+ 
+  /* transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+}
+ 
