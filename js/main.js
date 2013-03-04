@@ -8,8 +8,7 @@ require.config({
     backbone: 'libs/backbone/backbone-min', // https://github.com/amdjs
     bootstrap: 'libs/bootstrap/bootstrap', // https://github.com/amdjs
     sinon: 'libs/sinon/sinon.js',
-    socialite: 'libs/socialite/socialite.min',
-
+    
     // Require.js plugins
     text: 'libs/require/text',
     order: 'libs/require/order',

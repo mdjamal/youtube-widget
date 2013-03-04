@@ -10,13 +10,18 @@
                     </div>
                     <h5> <a href="#"><%= item.video.title %></a></h5>
                     <div class="box clearfix">
-                      <small class="pull-left social-buttons cf">
- 
+                      <small class="pull-left">
+<!--  
       <a href="http://twitter.com/share" class="socialite twitter-share" data-text="Check this video" data-url="http://mdjamal.in/youtube-widget/video.html?video=<%= item.video.id %>" data-hashtags="liltube" rel="nofollow" target="_blank"></a>
 
-      <a href="http://www.facebook.com/sharer.php?u=http://www.mdjamal.in&amp;t=Socialite.js" class="socialite facebook-like" data-href="http://mdjamal.in/youtube-widget/video.html?video=<%= item.video.id %>" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"></a>
-   
-                      <!--   <a href="http://localhost/youtube-widget/video.html?video=<%= item.video.id %>">tweet</a> -->
+      <a href="http://www.facebook.com/sharer.php?u=http://www.mdjamal.in&amp;t=Socialite.js" class="socialite facebook-like" data-href="http://mdjamal.in/youtube-widget/video.html?video=<%= item.video.id %>" data-send="false" data-layout="button_count" data-width="60" data-show-faces="false" rel="nofollow" target="_blank"></a> -->
+   <a href="http://mdjamal.in/youtube-widget/video.html?video=<%= item.video.id %>" class="" data-text="Check out this video" data-via="Liltube" data-count="none" data-hashtags="Lilcollections">tweet</a> |
+
+
+<a href="http://www.facebook.com/sharer.php?s=100&p[title]=Check this video&p[summary]=A video from lilcollections&p[url]=http://mdjamal.in/youtube-widget/video.html?video=<%= item.video.id %>&p[images][0]=http://i.ytimg.com/vi/<%= item.video.id %>/hqdefault.jpg" onclick="window.open(this.href, 'mywin',
+'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" >like</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+              
                       </small>
                       <small class="pull-right"><%= item.video.viewCount %></small>
                     </div>
